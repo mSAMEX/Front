@@ -9,15 +9,15 @@ import { DocTradeUserApiDataInterface } from './types';
 describe('Documentation actions', () => {
     const fakeResponse: DocTradeUserApiDataInterface = {
         info: {
-            title: 'Peatio User API v2',
-            description: 'API for Peatio application.',
+            title: 'mSamex User API v2',
+            description: 'API for mSamex application.',
             contact: {
-                name: 'openware.com',
-                email: 'hello@openware.com',
-                url: 'https://www.openware.com',
+                name: 'meshyazilim.com',
+                email: 'info@meshyazilim.com',
+                url: 'https://www.meshyazilim.com',
             },
             license: {
-                url: 'https://github.com/openware/peatio/blob/master/LICENSE.md',
+                url: 'https://github.com/msamex/',
             },
             version: '2.6.0-89e3acd',
         },
