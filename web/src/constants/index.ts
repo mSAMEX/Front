@@ -1,10 +1,10 @@
 import { CanCan } from "src/containers";
-import { AbilitiesInterface, Wallet } from "src/modules";
+import { Wallet } from "src/modules";
 import { DropdownElem } from "../components/Order";
 
 export const PG_TITLE_PREFIX = "mSamex Exchange";
 
-export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isLight?: boolean): string[][] => {
+export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => {
     const routes = [
         ["page.header.navbar.trade", "/trading/", `trade${isLight ? "Light" : ""}`],
 /**
