@@ -9,9 +9,9 @@ export const DocumentationHeader: React.FC = () => {
 
     return (
         <div className="pg-documentation-item pg-documentation-header">
-            <h3>{documentation?.info?.title}</h3>
+            <h3>mSamex USER API V2</h3>
             <div className="pg-documentation-header__description">
-                <span>{documentation?.info?.description}</span>
+                <span>API for mSamex exchange</span>
             </div>
             <div className="pg-documentation-header__version">
                 <h4>{intl.formatMessage({ id: 'page.documentation.header.version.title' })}&nbsp;{documentation?.info?.version}</h4>
@@ -19,26 +19,17 @@ export const DocumentationHeader: React.FC = () => {
             <div className="pg-documentation-header__contact-info">
                 <span>{intl.formatMessage({ id: 'page.documentation.header.contactInfo.title' })}</span>
                 <a
-                    href={documentation?.info?.contact?.url}
+                    href="https://www.meshyazilim.com"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    {documentation?.info?.contact?.name}
+                    www.Meshyazilim.com
                 </a>
-                <a href={`mailto: ${documentation?.info?.contact?.email}`}>
-                    {documentation?.info?.contact?.email}
-                </a>
-            </div>
-            <div className="pg-documentation-header__license">
-                <span>{intl.formatMessage({ id: 'page.documentation.header.license.title' })}</span>
-                <a
-                    href={documentation?.info?.license?.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {documentation?.info?.license?.url}
+                <a href="mailto: info@meshyazilim.com">
+                    info@meshyazilim.com
                 </a>
             </div>
+ 
         </div>
     );
 };
