@@ -116,10 +116,10 @@ interface State {
 const defaultOrderTypes: DropdownElem[] = [
     'Limit',
     'Market',
-    'Stop-loss',
+/**    'Stop-loss',
     'Take-profit',
     'Stop-limit',
-    'Take-limit',
+    'Take-limit',*/
 ];
 
 const splitBorder = 449;
