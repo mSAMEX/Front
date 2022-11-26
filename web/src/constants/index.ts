@@ -47,7 +47,7 @@ export const DEFAULT_WALLET: Wallet = {
 
 export const DEFAULT_CCY_PRECISION = 4;
 export const DEFAULT_FIAT_PRECISION = 2;
-export const DEFAULT_TRADING_VIEW_INTERVAL = "15";
+export const DEFAULT_TRADING_VIEW_INTERVAL = "60";
 export const VALUATION_PRIMARY_CURRENCY = "USDT";
 export const VALUATION_SECONDARY_CURRENCY = "BTC";
 
@@ -65,10 +65,11 @@ export const DEFAULT_TABLE_PAGE_LIMIT = 25;
 export const HOST_URL = window.location.hostname === "localhost" ? "http://localhost:9002" : window.location.origin;
 
 export const P2P_TIME_LIMIT_LIST = ["15 min", "30 min", "60 min"];
-export const ORDER_TYPES_WITH_TRIGGER = ["Stop-loss", "Take-profit", "Stop-limit", "Take-limit"];
-
+//export const ORDER_TYPES_WITH_TRIGGER = ["Stop-loss", "Take-profit", "Stop-limit", "Take-limit"];
+export const ORDER_TYPES_WITH_TRIGGER = [""];
 export const TRIGGER_BUY_PRICE_MULT = 1.1;
-export const TRIGGER_BUY_PRICE_ADJUSTED_TYPES = ["stop-loss", "take-profit"];
+//export const TRIGGER_BUY_PRICE_ADJUSTED_TYPES = ["stop-loss", "take-profit"];
+export const TRIGGER_BUY_PRICE_ADJUSTED_TYPES = [""];
 
 export const DEFAULT_MARKET = {
     id: "",
