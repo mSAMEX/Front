@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Wallet, Currency, Market, Ticker } from '../../modules';
 import { CryptoIcon } from '../../../components/CryptoIcon';
 import { Decimal } from '../../../components/Decimal';
 import { DEFAULT_CCY_PRECISION } from '../../../constants';
@@ -9,7 +10,20 @@ interface Props {
     onClick: (v: string) => void;
 }
 
-    const walletIcon = React.useMemo(() => {
+
+
+const WalletItemComponent = (props: Props) => {
+    const {
+        wallet: {
+            currency = '',
+            name,
+            iconUrl,
+            balance = 0,
+            fixed = DEFAULT_CCY_PRECISION,
+        },
+    } = props;
+    
+        const walletIcon = React.useMemo(() => {
         if (currency) {
             return iconUrl ? (
                 <span className="cr-crypto-icon cr-wallet-item__icon">
@@ -22,16 +36,6 @@ interface Props {
 
         return null;
     }, [currency, iconUrl]);
-
-const WalletItemComponent = (props: Props) => {
-    const {
-        wallet: {
-            currency = '',
-            name,
-            balance = 0,
-            fixed = DEFAULT_CCY_PRECISION,
-        },
-    } = props;
 
     return (
         <div className="cr-mobile-wallet-item" onClick={() => props.onClick(currency)}>
