@@ -9,6 +9,20 @@ interface Props {
     onClick: (v: string) => void;
 }
 
+    const walletIcon = React.useMemo(() => {
+        if (currency) {
+            return iconUrl ? (
+                <span className="cr-crypto-icon cr-wallet-item__icon">
+                    <img alt={currency.toUpperCase()} src={iconUrl} />
+                </span>
+            ) : (
+                <CryptoIcon className="cr-wallet-item__icon" code={currency.toUpperCase()} />
+            );
+        }
+
+        return null;
+    }, [currency, iconUrl]);
+
 const WalletItemComponent = (props: Props) => {
     const {
         wallet: {
@@ -22,9 +36,7 @@ const WalletItemComponent = (props: Props) => {
     return (
         <div className="cr-mobile-wallet-item" onClick={() => props.onClick(currency)}>
             <div>
-                         <span className="cr-crypto-icon cr-wallet-item__icon">
-                        <img alt={currency.toUpperCase()} src={iconUrl} width="32" height="32" />
-                    </span>
+                {walletIcon}
                 <span className="cr-mobile-wallet-item__currency">{currency}</span>
                 <span className="cr-mobile-wallet-item__name">{name}</span>
             </div>
