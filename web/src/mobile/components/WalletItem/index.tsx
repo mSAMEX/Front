@@ -27,7 +27,7 @@ const WalletItemComponent = (props: Props) => {
         if (currency) {
             return iconUrl ? (
                 <span className="cr-crypto-icon cr-wallet-item__icon">
-                    <img alt={currency.toUpperCase()} src={iconUrl} />
+                    <img alt={currency.toUpperCase()} src={iconUrl} width="32" height="32" />
                 </span>
             ) : (
                 <CryptoIcon className="cr-wallet-item__icon" code={currency.toUpperCase()} />
