@@ -9,7 +9,7 @@ const applogicRequestOptions: RequestOptions = {
 
 export function* abilitiesSaga() {
     try {
-        const applogicAbilities = yield call(API.get(applogicRequestOptions), '/abilities');
+        const applogicAbilities = yield call(API.get(applogicRequestOptions), '/admin/abilities');
         yield put(abilitiesData([ applogicAbilities ]));
     } catch (error) {
         yield put(abilitiesError());
