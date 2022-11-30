@@ -4,15 +4,15 @@ import { alertPush } from '../../../../modules/public/alert';
 import { abilitiesData, abilitiesError } from '../actions';
 
 const applogicRequestOptions: RequestOptions = {
-    apiVersion: 'finex',
+    apiVersion: 'peatio',
 };
 
 export function* abilitiesSaga() {
-   /** try {
+    try {
         const applogicAbilities = yield call(API.get(applogicRequestOptions), '/abilities');
         yield put(abilitiesData([ applogicAbilities ]));
     } catch (error) {
         yield put(abilitiesError());
         yield put(alertPush({message: error.message, code: error.code, type: 'error'}));
-    }*/
+    }
 }
