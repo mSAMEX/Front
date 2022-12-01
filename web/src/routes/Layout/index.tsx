@@ -318,8 +318,8 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/theme" component={ProfileThemeMobileScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileMobileScreen} />
                         <Route exact={true} path="/trading/:market?" component={TradingScreenMobile} />
-                        {showLanding() && <Route exact={true} path="/" component={LandingScreenMobile} />}
-                        <Route path="**"><Redirect to="/trading/" /></Route>
+                        <Route exact={true} path="/" component={LandingScreenMobile} />
+                        <Route path="**"><Redirect to="/trading/" /></Route> 
                     </Switch>
                     {isLoggedIn && <WalletsFetch />}
                     {isShownExpSessionModal && this.handleRenderExpiredSessionModal()}
