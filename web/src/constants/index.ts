@@ -47,7 +47,7 @@ export const DEFAULT_WALLET: Wallet = {
 
 export const DEFAULT_CCY_PRECISION = 4;
 export const DEFAULT_FIAT_PRECISION = 2;
-export const DEFAULT_TRADING_VIEW_INTERVAL = "60";
+export const DEFAULT_TRADING_VIEW_INTERVAL = "15";
 export const VALUATION_PRIMARY_CURRENCY = "USDT";
 export const VALUATION_SECONDARY_CURRENCY = "BTC";
 
@@ -87,6 +87,7 @@ export const colors = {
     light: {
         chart: {
             primary: "#fff",
+            crosshair: "#000000",
             up: "#54B489",
             down: "#E85E59",
         },
@@ -112,6 +113,7 @@ export const colors = {
     dark: {
         chart: {
             primary: "var(--rgb-body-background-color)",
+            crosshair: "#ffffff",
             up: "var(--rgb-bids)",
             down: "var(--rgb-asks)",
         },
