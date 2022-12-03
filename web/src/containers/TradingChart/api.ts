@@ -119,11 +119,11 @@ export const dataFeedObject = (tradingChart: TradingChartComponent, markets: Mar
             onErrorCallback,
             firstDataRequest,
         ) => {
-            const rangeFrom = getStartTimestampPeriod(to, resolution);
+           // const rangeFrom = getStartTimestampPeriod(to, resolution);
             const url = makeHistoryUrl(
                 symbolInfo.ticker || symbolInfo.name.toLowerCase(),
                 resolutionToSeconds(resolution),
-                rangeFrom,
+                from,
                 to,
             );
 
